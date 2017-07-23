@@ -32,8 +32,11 @@ while(1) {
    {
   cmd[strlen(cmd)-1] = '\0';
    }
+ 
   int count=Parse(cmd, params);
+ 
   if(strcmp(params[0], "exit") == 0) break;
+ 
   for (k=0; k <count; k++) 
    { 
    if (strcmp(params[k], "|") == 0) 
