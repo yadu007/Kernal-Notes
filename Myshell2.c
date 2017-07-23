@@ -100,14 +100,14 @@ int execred(char ** argv1, char ** argv2)
         int fd = open(*argv2, O_RDONLY, 0);
       dup2(fd, STDIN_FILENO);
       Global = 0;
-       int current_in = dup(0); 
+       int cur = dup(0); 
        }
 
     else if(Global==1) { 
     int fd = creat(*argv2, 0644);
     dup2(fd, STDOUT_FILENO);
     Global = 0;
-    int current_out = dup(1);
+    int curr = dup(1);
        }
        Run(argv1);
     }
